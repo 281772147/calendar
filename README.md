@@ -30,5 +30,19 @@ app.json中引入组件
 </view>
 ```
 
+组件属性
+| 属性         | 说明     | 类别                                    |
+|------------|--------|---------------------------------------|
+| selected   | 初始选中日期 | Array 例如:['2020-01-01', '2020-01-02'] |
+| lockDay    | 锁定日期   | String 例如:'2020-0101','2020-01-02'    |
+| isOpen     | 是否展开   | Boolean 默认:false                      |
+| multiple   | 是否多选日期 | Boolean 默认:true                       |
+| showHeader | 是否展示头部 | Boolean 默认:true                       |
+| readonly   | 是否不能修改 | Boolean 默认:false |
+| mini       | 使用mini样式 | Boolean 默认:false |
+
+
+
+
 
 
