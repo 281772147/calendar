@@ -73,7 +73,7 @@ module.exports = {
  {{day.date}}
 </view>
 
-            <view wx:else class="date {{mini?'mini':''}} {{canlender.month==day.month && ((nowMonth === day.month && day.date-nowDate > 0) || (day.month - nowMonth > 0))? '' : 'placeholder'}} {{day.checked && canlender.month == day.month?'date-current': ''}}" data-week="{{week}}" data-index="{{index}}" data-ischeck="{{canlender.month==day.month && ((nowMonth === day.month && day.date-nowDate > 0) || (day.month - nowMonth > 0))}}"
+            <view wx:else class="date {{mini?'mini':''}} {{canlender.month==day.month && ((nowMonth === day.month && day.date-nowDate >= 0) || (day.month - nowMonth > 0))? '' : 'placeholder'}} {{day.checked && canlender.month == day.month?'date-current': ''}}" data-week="{{week}}" data-index="{{index}}" data-ischeck="{{canlender.month==day.month && ((nowMonth === day.month && day.date-nowDate >= 0) || (day.month - nowMonth > 0))}}"
               bindtap='selectDay'>
               {{day.date}} 
                <!-- <view wx:if="{{(readonly && day.checked) || (day.checked && canlender.month != day.month)}}" class="data-circle {{mini?'mini':''}}"></view> -->

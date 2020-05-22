@@ -192,6 +192,9 @@ Component({
       });
       this.data.selectDays = selectDays;
       this.getWeek(datestr);
+      this.triggerEvent('getdate', {
+        datestr
+      })
     },
     //点击确定
     packup() {
@@ -240,11 +243,14 @@ Component({
     // 返回今天
     backtoday() {
       if(!this.data.readonly){
-        let today = this.dateStr(new Date());
-        this.data.selectDays.push(today);
+        let datestr = this.dateStr(new Date());
+        this.data.selectDays.push(datestr);
         this.setData({
           selectDays: this.data.selectDays
         });
+        this.triggerEvent('getdate', {
+          datestr
+        })
       }
       this.getWeek(new Date());
     },
@@ -353,13 +359,13 @@ Component({
       })
       month = month < 10 ? "0" + month : month
       date = date < 10 ? "0" + date : date
-      let localstr = year+"-"+month+"-"+date;
-      this.triggerEvent('getdate', {
-        year,
-        month,
-        date,
-        localstr
-      })
+      // let localstr = year+"-"+month+"-"+date;
+      // this.triggerEvent('getdate', {
+      //   year,
+      //   month,
+      //   date,
+      //   localstr
+      // })
     },
     checkall(){
       let date = new Date();
@@ -400,7 +406,7 @@ Component({
         day = date.getDay();
         let str = this.format(date);
         if(date.getMonth() == new Date().getMonth()){
-          if(date.getDate() - new Date().getDate() > 0){
+          if(date.getDate() - new Date().getDate() >= 0){
             days.push(str);
           }
         }else if(date.getMonth() > new Date().getMonth()){

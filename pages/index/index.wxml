@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
   <view>
-    <calendar id="calendar" isOpen="{{true}}" selected="{{selectedDays}}" lockDay="{{lockday}}" bind:getdate="getdate" bind:checkall="checkall"></calendar>
+    <calendar id="calendar" isOpen="{{true}}" selected="{{selectedDays}}" lockDay="{{lockday}}" bind:select="cmfclick" bind:getdate="getdate" bind:checkall="checkall" bind:clear="clear"></calendar>
   </view>
 </view>
