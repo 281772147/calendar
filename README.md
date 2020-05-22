@@ -2,11 +2,13 @@
 
 #### 介绍
 微信小程序原生日历组件Calendar
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0522/100406_14f86c93_89049.png "Snip20200522_2.png")
 
 使用组件
 
 把demo代码中components/calendar复制到工程根目录下
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0522/100429_8d4aa3e5_89049.png "Snip20200521_1.png")
 
 app.json中引入组件
